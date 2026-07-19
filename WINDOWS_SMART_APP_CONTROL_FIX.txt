@@ -1,0 +1,52 @@
+================================================================================
+           WINDOWS SMART APP CONTROL & ANTIVIRUS FIX GUIDE
+================================================================================
+
+If you double-click or run "start.bat" as Administrator and the window closes 
+immediately or appears for only a second without starting the app, this is caused by 
+Windows Smart App Control or Windows Defender protecting downloaded script files.
+
+--------------------------------------------------------------------------------
+FIX 1: THE 5-SECOND "UNBLOCK" METHOD (RECOMMENDED)
+--------------------------------------------------------------------------------
+When Windows downloads a project or archive from the web, it adds a hidden security tag 
+called "Mark of the Web" to the files. To allow GitUpX to run normally:
+
+1. Right-click the downloaded ZIP file (or the "start.bat" file itself).
+2. Select "Properties" at the bottom of the menu.
+3. At the very bottom of the "General" tab, look for the security warning:
+   "This file came from another computer and might be blocked to help protect this computer."
+4. Check the box labeled [X] UNBLOCK.
+5. Click Apply, then OK.
+6. Double-click "start.bat" again!
+
+--------------------------------------------------------------------------------
+FIX 2: RUN VIA POWERSHELL (UNBLOCK ENTIRE FOLDER)
+--------------------------------------------------------------------------------
+If you want to unblock all project files at once:
+
+1. Open PowerShell in the project folder (Hold Shift + Right-click inside the folder -> "Open PowerShell window here" or "Open in Terminal").
+2. Run this command:
+   Unblock-File -Path .\* -Recurse
+3. Now run:
+   .\start.ps1   (or .\start.bat)
+
+--------------------------------------------------------------------------------
+FIX 3: TEMPORARILY SET SMART APP CONTROL TO EVALUATION / OFF
+--------------------------------------------------------------------------------
+If Windows 11 Smart App Control continues to block Node.js or Python processes:
+
+1. Open Windows Settings -> Privacy & Security -> Windows Security.
+2. Click "App & browser control".
+3. Under "Smart App Control settings", click "Smart App Control settings".
+4. Switch from "On" to "Evaluation" or "Off".
+5. Run "start.bat" again.
+
+================================================================================
+       REMINDER: REAL-TIME LOCAL ENGINE IS ALWAYS AVAILABLE!
+================================================================================
+Even if Python or backend servers are blocked by Windows policies, GitUpX includes 
+a built-in Real-Time Interactive Local Engine inside the browser app. Once the 
+web browser opens at http://localhost:3000, you can test AST scanning, secret 
+masking, and repository management without any backend installation required!
+================================================================================

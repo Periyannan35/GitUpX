@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="gitupx-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#0F172A" />
+  <path d="M256 96 L384 176 L384 336 L256 416 L128 336 L128 176 Z" stroke="url(#gitupx-grad)" stroke-width="24" stroke-linejoin="round" />
+  <path d="M256 160 V352 M176 224 L256 160 L336 224" stroke="#60A5FA" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="256" cy="352" r="24" fill="#10B981" />
+  <path d="M320 320 L368 368 M368 320 L320 368" stroke="#EF4444" stroke-width="24" stroke-linecap="round" />
+</svg>

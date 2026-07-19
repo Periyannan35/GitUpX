@@ -1,0 +1,24 @@
+[
+  {
+    "context": {
+      "variable_name": "mock_api_key",
+      "parent_function_name": "test_login_success",
+      "parent_class_name": "TestAuthSuite",
+      "file_path": "tests/test_auth.py",
+      "lines_before": ["# Unit test setup", "client = MockClient(api_key='mock_api_key')"],
+      "lines_after": ["assert client.is_authenticated() == True", "client.close()"]
+    },
+    "label": 0
+  },
+  {
+    "context": {
+      "variable_name": "AWS_SECRET_ACCESS_KEY",
+      "parent_function_name": "init_s3_client",
+      "parent_class_name": "AWSService",
+      "file_path": "src/services/aws_s3.py",
+      "lines_before": ["# Load production credentials", "self.client = boto3.client('s3', secret=AWS_SECRET_ACCESS_KEY)"],
+      "lines_after": ["self.client.list_buckets()", "logger.info('Connected to S3')"]
+    },
+    "label": 1
+  }
+]
