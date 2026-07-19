@@ -10,6 +10,11 @@
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit"
   },
+  "scripts": {
+  "dev": "vite",
+  "build": "tsc && vite build",
+  "preview": "vite preview"
+},
   "dependencies": {
     "@google/genai": "^2.4.0",
     "@tailwindcss/vite": "^4.1.14",
